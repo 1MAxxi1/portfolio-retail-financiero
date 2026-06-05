@@ -102,7 +102,7 @@ tipos_pago = ['Credito Tienda', 'Debito', 'Efectivo', ' debito ', 'CREDITO TIEND
 
 for id_trans in range(1001, 6001): 
     id_loc = random.randint(1, 16)
-    id_cli = random.randint(1, 2000) if random.random() > 0.1 else '\\N'
+    id_cli = random.randint(1, 2000) if random.random() > 0.1 else 9999
     
     num_items = random.randint(1, 4)
     monto_total = 0
@@ -146,3 +146,4 @@ with open('detalle_transacciones.csv', 'w', newline='', encoding='utf-8') as f:
     writer.writerows(detalles)
 
 print("¡Éxito! 6 archivos CSV generados matemáticamente cuadrados e incluyendo cuotas.")
+
