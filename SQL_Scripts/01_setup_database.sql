@@ -23,7 +23,7 @@ CREATE TABLE clientes_credito (
     estado_riesgo VARCHAR(50)
 );
 
-CREATE TABLE transacciones_pos (
+CREATE TABLE transacciones (
     id_transaccion INT PRIMARY KEY,
     id_local INT,
     id_cliente INT, -- Puede ser NULL si el cliente compró en efectivo
