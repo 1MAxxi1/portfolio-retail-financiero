@@ -32,6 +32,26 @@ CREATE TABLE transacciones (
     tipo_pago VARCHAR(50)
 );
 
+-- Tabla de Dimensión: Catálogo de Productos
+CREATE TABLE productos (
+    id_producto INT PRIMARY KEY,
+    categoria VARCHAR(100),
+    nombre_producto VARCHAR(150),
+    precio_unitario DECIMAL(10,2)
+);
+
+-- Tabla de Hechos: Detalle de los ítems comprados por transacción
+CREATE TABLE detalle_transacciones (
+    id_detalle INT PRIMARY KEY,
+    id_transaccion INT,
+    id_producto INT,
+    cantidad INT,
+    subtotal DECIMAL(10,2),
+    -- Definición de Claves Foráneas para asegurar integridad
+    FOREIGN KEY (id_transaccion) REFERENCES transacciones(id_transaccion),
+    FOREIGN KEY (id_producto) REFERENCES productos(id_producto)
+);
+
 -- 2. INYECCIÓN DE DATOS (Con basura intencional para posterior Data Wrangling)
 
 -- Locales (Datos Relativamente limpios)
