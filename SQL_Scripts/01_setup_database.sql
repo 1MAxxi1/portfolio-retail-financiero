@@ -50,7 +50,7 @@ INSERT INTO clientes_credito (id_cliente, nombre_completo, limite_credito, estad
 (105, '   luis Morales', 250000.00, 'MOROSO');
 
 -- Transacciones (Fechas rotas, nulos y errores de tipeo)
-INSERT INTO transacciones_pos (id_transaccion, id_local, id_cliente, fecha_venta, monto_total, tipo_pago) VALUES
+INSERT INTO transacciones (id_transaccion, id_local, id_cliente, fecha_venta, monto_total, tipo_pago) VALUES
 (1001, 1, 101, '15/05/2025', 45000.50, 'Credito Tienda'),
 (1002, 3, NULL, '16-05-2025', 12500.00, 'Efectivo '), -- Cliente anónimo
 (1003, 2, 102, '2025-05-17', 200000.00, 'Credito Tienda'), -- Monto supera el límite del cliente 102
