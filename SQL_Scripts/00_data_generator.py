@@ -102,7 +102,7 @@ tipos_pago = ['Credito Tienda', 'Debito', 'Efectivo', ' debito ', 'CREDITO TIEND
 
 for id_trans in range(1001, 6001): 
     id_loc = random.randint(1, 16)
-    id_cli = random.randint(1, 2000) if random.random() > 0.1 else ''
+    id_cli = random.randint(1, 2000) if random.random() > 0.1 else '\\N'
     
     num_items = random.randint(1, 4)
     monto_total = 0
