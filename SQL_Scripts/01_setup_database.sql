@@ -26,6 +26,13 @@ CREATE TABLE clientes_credito (
     estado_riesgo VARCHAR(50)
 );
 
+-- ==============================================================================
+-- INYECCIÓN POR DEFECTO: CLIENTE ANÓNIMO (Metodología Kimball)
+-- Evita nulos en la tabla de hechos para mantener la integridad financiera
+-- ==============================================================================
+INSERT INTO clientes_credito (id_cliente, nombre_completo, fecha_nacimiento, limite_credito, deuda_actual, estado_riesgo) 
+VALUES (9999, 'CLIENTE ANONIMO', '1900-01-01', 0.00, 0.00, 'SIN RIESGO');
+
 CREATE TABLE productos (
     id_producto INT PRIMARY KEY,
     categoria VARCHAR(100),
