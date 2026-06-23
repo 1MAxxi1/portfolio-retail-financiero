@@ -21,7 +21,7 @@ CREATE TABLE clientes_credito (
     id_cliente INT PRIMARY KEY,
     nombre_completo VARCHAR(150),
     fecha_nacimiento DATE,       
-    limite_credito VARCHAR(100),
+    limite_credito VARCHAR(50),
     deuda_actual DECIMAL(10,2),  
     estado_riesgo VARCHAR(50)
 );
