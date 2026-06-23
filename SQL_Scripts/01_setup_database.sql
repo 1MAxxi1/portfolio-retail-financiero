@@ -29,9 +29,25 @@ CREATE TABLE clientes_credito (
 -- ==============================================================================
 -- INYECCIÓN POR DEFECTO: CLIENTE ANÓNIMO (Metodología Kimball)
 -- Evita nulos en la tabla de hechos para mantener la integridad financiera
+-- y asegurar que las ventas sin id_cliente registrado no rompan el sistema.
 -- ==============================================================================
-INSERT INTO clientes_credito (id_cliente, nombre_completo, fecha_nacimiento, limite_credito, deuda_actual, estado_riesgo) 
-VALUES (9999, 'CLIENTE ANONIMO', '1900-01-01', 0.00, 0.00, 'SIN RIESGO');
+INSERT INTO clientes_credito (
+    id_cliente, 
+    nombre_completo, 
+    fecha_nacimiento, 
+    limite_credito, 
+    deuda_actual, 
+    estado_riesgo
+) 
+VALUES (
+    9999, 
+    'CLIENTE ANONIMO', 
+    '1900-01-01', 
+    '0.00', 
+    0.00, 
+    'SIN RIESGO'
+)
+ON DUPLICATE KEY UPDATE id_cliente=id_cliente;
 
 CREATE TABLE productos (
     id_producto INT PRIMARY KEY,
@@ -61,7 +77,7 @@ CREATE TABLE transacciones (
     fecha_venta VARCHAR(50), 
     monto_total DECIMAL(10,2),
     tipo_pago VARCHAR(50),       -- 'Debito', 'Efectivo', 'Credito Tienda'
-    cantidad_cuotas INT,         -- NUEVO: La genialidad que propusiste
+    cantidad_cuotas INT,        
     FOREIGN KEY (id_local) REFERENCES locales(id_local),
     FOREIGN KEY (id_cliente) REFERENCES clientes_credito(id_cliente)
 );
