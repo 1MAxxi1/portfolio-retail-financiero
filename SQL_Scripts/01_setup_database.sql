@@ -91,3 +91,15 @@ CREATE TABLE detalle_transacciones (
     FOREIGN KEY (id_transaccion) REFERENCES transacciones(id_transaccion),
     FOREIGN KEY (id_producto) REFERENCES productos(id_producto)
 );
+
+-- ==============================================================================
+-- 3. INGESTA MASIVA DE ARCHIVOS CON SUS DATOS 
+-- Nota: En entornos locales con restricciones de seguridad de XAMPP, 
+-- se recomienda usar la pestaña 'Importar' de phpMyAdmin para cada tabla.
+-- ==============================================================================
+-- LOAD DATA INFILE './data/locales.csv' INTO TABLE locales FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
+-- LOAD DATA INFILE './data/clientes_credito.csv' INTO TABLE clientes_credito FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
+-- LOAD DATA INFILE './data/productos.csv' INTO TABLE productos FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
+-- LOAD DATA INFILE './data/inventario.csv' INTO TABLE inventario FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
+-- LOAD DATA INFILE './data/transacciones.csv' INTO TABLE transacciones FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
+-- LOAD DATA INFILE './data/detalle_transacciones.csv' INTO TABLE detalle_transacciones FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
