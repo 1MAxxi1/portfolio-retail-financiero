@@ -1,7 +1,7 @@
 -- ==============================================================================
 -- PROYECTO: RETAIL FINANCIERO & LOGÍSTICA
 -- ARCHIVO: 01_setup_database.sql
--- OBJETIVO: Creación de la base de datos
+-- OBJETIVO: Creación de la base de datos e integración de datos
 -- ==============================================================================
 
 CREATE DATABASE retail_financiero;
