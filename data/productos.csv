@@ -1,0 +1,101 @@
+id_producto,categoria,nombre_producto,costo_compra,precio_venta
+1,Muebles,Producto_Muebles_1,104522.16,261305.4
+2,Tecnologia,Producto_Tecnologia_2,200647.08,230744.14
+3,Muebles,Producto_Muebles_3,64586.12,161465.3
+4,Tecnologia,Producto_Tecnologia_4,184208.89,211840.22
+5,Ferreteria,Producto_Ferreteria_5,67223.0,100834.5
+6,Tecnologia,Producto_Tecnologia_6,277297.87,318892.55
+7,Tecnologia,Producto_Tecnologia_7,521715.77,599973.14
+8,Ferreteria,Producto_Ferreteria_8,30326.53,45489.79
+9,Muebles,Producto_Muebles_9,100977.84,252444.6
+10,Linea Blanca,Producto_Linea Blanca_10,176969.16,230059.91
+11,Muebles,Producto_Muebles_11,161724.37,404310.92
+12,Linea Blanca,Producto_Linea Blanca_12,343703.57,446814.64
+13,Tecnologia,Producto_Tecnologia_13,420228.07,483262.28
+14,Linea Blanca,Producto_Linea Blanca_14,175795.64,228534.33
+15,Linea Blanca,Producto_Linea Blanca_15,127488.25,165734.73
+16,Tecnologia,Producto_Tecnologia_16,270961.77,311606.04
+17,Tecnologia,Producto_Tecnologia_17,53955.1,62048.36
+18,Linea Blanca,Producto_Linea Blanca_18,366527.14,476485.28
+19,Linea Blanca,Producto_Linea Blanca_19,229309.57,298102.44
+20,Linea Blanca,Producto_Linea Blanca_20,344581.67,447956.17
+21,Tecnologia,Producto_Tecnologia_21,293416.23,337428.66
+22,Muebles,Producto_Muebles_22,138811.18,347027.95
+23,Muebles,Producto_Muebles_23,172675.72,431689.3
+24,Linea Blanca,Producto_Linea Blanca_24,268453.23,348989.2
+25,Tecnologia,Producto_Tecnologia_25,210935.47,242575.79
+26,Tecnologia,Producto_Tecnologia_26,488285.1,561527.86
+27,Tecnologia,Producto_Tecnologia_27,152577.5,175464.12
+28,Linea Blanca,Producto_Linea Blanca_28,202297.89,262987.26
+29,Muebles,Producto_Muebles_29,103351.93,258379.82
+30,Ferreteria,Producto_Ferreteria_30,67496.41,101244.62
+31,Linea Blanca,Producto_Linea Blanca_31,242707.5,315519.75
+32,Linea Blanca,Producto_Linea Blanca_32,265742.23,345464.9
+33,Ferreteria,Producto_Ferreteria_33,100475.06,150712.59
+34,Linea Blanca,Producto_Linea Blanca_34,111059.33,144377.13
+35,Muebles,Producto_Muebles_35,58663.29,146658.23
+36,Muebles,Producto_Muebles_36,142421.19,356052.97
+37,Muebles,Producto_Muebles_37,97080.49,242701.23
+38,Tecnologia,Producto_Tecnologia_38,258025.49,296729.31
+39,Linea Blanca,Producto_Linea Blanca_39,119037.94,154749.32
+40,Muebles,Producto_Muebles_40,94769.38,236923.45
+41,Linea Blanca,Producto_Linea Blanca_41,228770.47,297401.61
+42,Muebles,Producto_Muebles_42,97997.33,244993.33
+43,Tecnologia,Producto_Tecnologia_43,363337.17,417837.75
+44,Tecnologia,Producto_Tecnologia_44,111337.36,128037.96
+45,Tecnologia,Producto_Tecnologia_45,99095.07,113959.33
+46,Muebles,Producto_Muebles_46,123939.52,309848.8
+47,Tecnologia,Producto_Tecnologia_47,286668.77,329669.09
+48,Muebles,Producto_Muebles_48,56021.27,140053.17
+49,Linea Blanca,Producto_Linea Blanca_49,333980.49,434174.64
+50,Tecnologia,Producto_Tecnologia_50,494081.7,568193.95
+51,Tecnologia,Producto_Tecnologia_51,72787.42,83705.53
+52,Linea Blanca,Producto_Linea Blanca_52,323936.77,421117.8
+53,Tecnologia,Producto_Tecnologia_53,367256.59,422345.08
+54,Ferreteria,Producto_Ferreteria_54,55107.08,82660.62
+55,Linea Blanca,Producto_Linea Blanca_55,177062.62,230181.41
+56,Tecnologia,Producto_Tecnologia_56,197997.91,227697.6
+57,Linea Blanca,Producto_Linea Blanca_57,335216.28,435781.16
+58,Linea Blanca,Producto_Linea Blanca_58,384190.78,499448.01
+59,Muebles,Producto_Muebles_59,161967.72,404919.3
+60,Tecnologia,Producto_Tecnologia_60,251492.9,289216.83
+61,Tecnologia,Producto_Tecnologia_61,546706.78,628712.8
+62,Tecnologia,Producto_Tecnologia_62,384886.67,442619.67
+63,Linea Blanca,Producto_Linea Blanca_63,162497.49,211246.74
+64,Tecnologia,Producto_Tecnologia_64,244065.89,280675.77
+65,Muebles,Producto_Muebles_65,164492.22,411230.55
+66,Tecnologia,Producto_Tecnologia_66,378503.72,435279.28
+67,Tecnologia,Producto_Tecnologia_67,172764.45,198679.12
+68,Linea Blanca,Producto_Linea Blanca_68,213830.88,277980.14
+69,Linea Blanca,Producto_Linea Blanca_69,168575.75,219148.48
+70,Linea Blanca,Producto_Linea Blanca_70,282723.83,367540.98
+71,Ferreteria,Producto_Ferreteria_71,81397.88,122096.82
+72,Tecnologia,Producto_Tecnologia_72,580873.03,668003.98
+73,Ferreteria,Producto_Ferreteria_73,17668.26,26502.39
+74,Muebles,Producto_Muebles_74,90376.96,225942.4
+75,Tecnologia,Producto_Tecnologia_75,119563.75,137498.31
+76,Linea Blanca,Producto_Linea Blanca_76,375853.35,488609.35
+77,Linea Blanca,Producto_Linea Blanca_77,198762.36,258391.07
+78,Tecnologia,Producto_Tecnologia_78,312167.12,358992.19
+79,Linea Blanca,Producto_Linea Blanca_79,107533.13,139793.07
+80,Muebles,Producto_Muebles_80,54961.71,137404.27
+81,Muebles,Producto_Muebles_81,188575.13,471437.83
+82,Ferreteria,Producto_Ferreteria_82,84278.07,126417.11
+83,Tecnologia,Producto_Tecnologia_83,410322.03,471870.33
+84,Linea Blanca,Producto_Linea Blanca_84,103228.61,134197.19
+85,Tecnologia,Producto_Tecnologia_85,57352.87,65955.8
+86,Tecnologia,Producto_Tecnologia_86,493602.99,567643.44
+87,Tecnologia,Producto_Tecnologia_87,404291.06,464934.72
+88,Tecnologia,Producto_Tecnologia_88,94553.69,108736.74
+89,Linea Blanca,Producto_Linea Blanca_89,274722.22,357138.89
+90,Muebles,Producto_Muebles_90,65439.67,163599.17
+91,Linea Blanca,Producto_Linea Blanca_91,236502.07,307452.69
+92,Tecnologia,Producto_Tecnologia_92,84492.81,97166.73
+93,Tecnologia,Producto_Tecnologia_93,580993.65,668142.7
+94,Tecnologia,Producto_Tecnologia_94,344599.95,396289.94
+95,Tecnologia,Producto_Tecnologia_95,485708.7,558565.01
+96,Ferreteria,Producto_Ferreteria_96,122797.05,184195.58
+97,Tecnologia,Producto_Tecnologia_97,369378.97,424785.82
+98,Ferreteria,Producto_Ferreteria_98,59436.54,89154.81
+99,Linea Blanca,Producto_Linea Blanca_99,352871.73,458733.25
+100,Linea Blanca,Producto_Linea Blanca_100,140929.07,183207.79
