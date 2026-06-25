@@ -82,9 +82,20 @@ SELECT
 FROM clientes_credito;
 
 -- 6. Auditoría: TABLA TRANSACCIONES (Evidencia de datos sucios)
-SELECT 
-    'transacciones' AS tabla,
+SELECT
+	'transacciones' AS tabla,
     COUNT(*) AS total_registros,
-    SUM(CASE WHEN fecha_venta NOT LIKE '2025-%' OR LENGTH(fecha_venta) != 10 THEN 1 ELSE 0 END) AS fechas_fuera_de_formato_estandar,
-    SUM(CASE WHEN tipo_pago LIKE ' %' OR tipo_pago LIKE '% ' THEN 1 ELSE 0 END) AS pagos_con_espacios
+    SUM(CASE WHEN id_transaccion IS null THEN 1 ELSE 0 END) AS nulos_id_transaccion,
+    SUM(CASE WHEN id_local IS null THEN 1 ELSE 0 END) AS nulos_id_local,
+    SUM(CASE WHEN id_cliente IS null THEN 1 ELSE 0 END) AS nulos_id_cliente,
+    SUM(CASE WHEN fecha_venta IS null THEN 1 ELSE 0 END) AS nulos_fecha_venta,
+    SUM(CASE WHEN LENGTH(fecha_venta) != 10 OR fecha_venta NOT LIKE '2025-%' THEN 1 ELSE 0 END) AS fechas_formato_incorrecto,
+    SUM(CASE WHEN monto_total IS null THEN 1 ELSE 0 END) AS nulos_monto_total,
+    SUM(CASE WHEN tipo_pago IS null THEN 1 ELSE 0 END) AS nulos_tipo_pago,
+    SUM(CASE WHEN tipo_pago LIKE ' %' OR tipo_pago LIKE '% ' THEN 1 ELSE 0 END) AS espacios_tipo_pago,
+    SUM(CASE WHEN cantidad_cuotas IS null THEN 1 ELSE 0 END) AS nulos_cantidad_cuotas,
+    MIN(monto_total) AS min_monto_total,
+    MAX(monto_total) AS max_monto_total,
+    MIN(cantidad_cuotas) AS min_cantidad_cuotas,
+    MAX(cantidad_cuotas) AS max_cantidad_cuotas
 FROM transacciones;
