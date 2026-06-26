@@ -89,7 +89,7 @@ SELECT
     SUM(CASE WHEN id_local IS null THEN 1 ELSE 0 END) AS nulos_id_local,
     SUM(CASE WHEN id_cliente IS null THEN 1 ELSE 0 END) AS nulos_id_cliente,
     SUM(CASE WHEN fecha_venta IS null THEN 1 ELSE 0 END) AS nulos_fecha_venta,
-    SUM(CASE WHEN fecha_venta NOT REGEXP '^[0-9]{4}-[0-9]{2}-[0-9]{2}$' THEN 1 ELSE 0 END) AS fechas_formato_incorrecto,
+    SUM(CASE WHEN fecha_venta NOT REGEXP '^[0-9]{4}-[0-9]{2}-[0-9]{2}$' THEN 1 ELSE 0 END) AS fechas_formato_incorrecto, -- buscamos formatos incorrectos de fecha ya que el tipo de dato es varchar
     SUM(CASE WHEN monto_total IS null THEN 1 ELSE 0 END) AS nulos_monto_total,
     SUM(CASE WHEN tipo_pago IS null THEN 1 ELSE 0 END) AS nulos_tipo_pago,
     SUM(CASE WHEN tipo_pago LIKE ' %' OR tipo_pago LIKE '% ' THEN 1 ELSE 0 END) AS espacios_tipo_pago,
