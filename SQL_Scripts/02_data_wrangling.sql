@@ -121,3 +121,33 @@ SELECT
     deuda_actual,
     TRIM(estado_riesgo) AS estado_riesgo
 FROM clientes_credito
+
+-- ==============================================================================
+-- 2.2 Vista Limpia: Transacciones
+-- Soluciona: 
+-- Estandarización de fechas mutantes (VARCHAR) a formato universal matemático (DATE).
+-- Limpieza de espacios basura, corrección ortográfica y unificación a mayúsculas en métodos de pago.
+-- ==============================================================================
+
+CREATE VIEW vw_transacciones_limpias AS
+SELECT 
+    id_transaccion,
+    id_local,
+    id_cliente,
+    -- De texto a DATE
+    CASE 
+        WHEN fecha_venta REGEXP '^[0-9]{2}/[0-9]{2}/[0-9]{4}$' THEN STR_TO_DATE(fecha_venta, '%d/%m/%Y')
+        WHEN fecha_venta REGEXP '^[0-9]{2}-[0-9]{2}-[0-9]{4}$' THEN STR_TO_DATE(fecha_venta, '%d-%m-%Y')
+        WHEN fecha_venta REGEXP '^[0-9]{4}-[0-9]{2}-[0-9]{2}$' THEN STR_TO_DATE(fecha_venta, '%Y-%m-%d')
+        ELSE NULL 
+    END AS fecha_venta, 
+    monto_total,
+            CASE 
+    			WHEN UPPER(TRIM(tipo_pago)) = 'EFECTIVO' THEN 'EFECTIVO'
+    			WHEN UPPER(TRIM(tipo_pago)) = 'DEBITO' THEN 'DEBITO'
+                WHEN UPPER(TRIM(tipo_pago)) = 'CREDITO' THEN 'CREDITO'
+    			WHEN UPPER(TRIM(tipo_pago)) = 'CREDITO TIENDA' THEN 'CREDITO'
+    			ELSE 'OTROS / POR CLASIFICAR'
+            END AS tipo_pago,
+    cantidad_cuotas
+FROM transacciones;
