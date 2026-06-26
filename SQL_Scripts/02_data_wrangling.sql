@@ -68,7 +68,7 @@ SELECT
     SUM(CASE WHEN id_cliente IS null THEN 1 ELSE 0 END) AS nulos_id_cliente,
     SUM(CASE WHEN nombre_completo LIKE ' %' OR nombre_completo LIKE '% ' THEN 1 ELSE 0 END) AS nombres_con_espacios,
     SUM(CASE WHEN nombre_completo IS null THEN 1 ELSE 0 END) AS nulos_nombre_completo,
-    SUM(CASE WHEN fecha_nacimiento IS null THEN 1 ELSE 0 END) AS nulos_fecha_nacimiento,
+    SUM(CASE WHEN fecha_nacimiento IS null THEN 1 ELSE 0 END) AS nulos_fecha_nacimiento, -- solo buscamos nulos ya que el tipo de dato de fecha_nacimiento es date
     SUM(CASE WHEN TRIM(limite_credito) = '' THEN 1 ELSE 0 END) AS limite_credito_vacios,
     SUM(CASE WHEN limite_credito LIKE ' %' OR limite_credito LIKE '% ' THEN 1 ELSE 0 END) AS limite_credito_con_espacios,
     SUM(CASE WHEN limite_credito IS null THEN 1 ELSE 0 END) AS nulos_limite_credito,
