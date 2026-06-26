@@ -99,3 +99,25 @@ SELECT
     MIN(cantidad_cuotas) AS min_cantidad_cuotas,
     MAX(cantidad_cuotas) AS max_cantidad_cuotas
 FROM transacciones;
+
+-- ==============================================================================
+-- FASE 2: LIMPIEZA Y ESTANDARIZACIÓN (CAPA PLATA)
+-- Objetivo: Construir Vistas (Views) para encapsular las reglas de limpieza 
+-- sobre las tablas que presentaron datos corruptos en el Data Profiling.
+-- Justificación: Las tablas locales, productos, inventario y detalle_transacciones 
+-- mantienen integridad estructural, por lo que no requieren vistas de limpieza.
+-- ==============================================================================
+
+-- 2.1 Vista Limpia: Clientes Crédito
+-- Soluciona: Espacios en textos (TRIM) y convierte vacíos absolutos a NULL.
+-- Transforma el límite de crédito de texto (VARCHAR) a numérico financiero (DECIMAL).
+
+CREATE VIEW vw_clientes_credito_limpios AS
+SELECT
+	id_cliente,
+    TRIM(nombre_completo) AS nombre_completo,
+    fecha_nacimiento,
+    CAST(NULLIF(TRIM(limite_credito), '') AS DECIMAL(15,2)) AS limite_credito,
+    deuda_actual,
+    TRIM(estado_riesgo) AS estado_riesgo
+FROM clientes_credito
