@@ -119,7 +119,7 @@ SELECT
     fecha_nacimiento,
     CAST(NULLIF(TRIM(limite_credito), '') AS DECIMAL(15,2)) AS limite_credito,
     deuda_actual,
-    TRIM(estado_riesgo) AS estado_riesgo
+    UPPER(TRIM(estado_riesgo)) AS estado_riesgo
 FROM clientes_credito
 
 -- ==============================================================================
