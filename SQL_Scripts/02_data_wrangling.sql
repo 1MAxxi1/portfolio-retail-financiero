@@ -117,7 +117,7 @@ SELECT
 	id_cliente,
     TRIM(nombre_completo) AS nombre_completo,
     fecha_nacimiento,
-    CAST(NULLIF(TRIM(limite_credito), '') AS DECIMAL(15,2)) AS limite_credito,
+    COALESCE(CAST(NULLIF(TRIM(limite_credito), '') AS DECIMAL(15,2)), 0.00) AS limite_credito,
     deuda_actual,
     UPPER(TRIM(estado_riesgo)) AS estado_riesgo
 FROM clientes_credito
